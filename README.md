@@ -1,1 +1,2 @@
 # rock-paper-scissors
+A simpe 'rock paper scissors' game that will be played on the browsers console. The game is a basic project on the course to note the use and functionality of functions in Javascript.
