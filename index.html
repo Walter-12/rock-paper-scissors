@@ -17,22 +17,22 @@
             
 
             if(playerSelection === 'rock' && computerSelection === 'paper'){
-                return 'You Lose! paper beats rock';
+                return 'You Lose!';
             }
             else if(playerSelection === 'scissors' && computerSelection === 'paper'){
-                return 'You Win! scissors beats paper';
+                return 'You Win!';
             }
             else if(playerSelection === 'rock' && computerSelection === 'scissors'){
-                return 'You Win! rock beats scissors';
+                return 'You Win!';
             }
             else if(playerSelection === 'scissors' && computerSelection === 'rock'){
-                return 'You Lose! rock beats scissors';
+                return 'You Lose!';
             }
             else if(playerSelection === 'paper' && computerSelection === 'rock'){
-                return 'You Win! paper beats rock';
+                return 'You Win!';
             }
             else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-                return 'You Lose! scissors beats paper';
+                return 'You Lose!';
             }else{
                 return 'Play Again!'
             }
@@ -42,9 +42,26 @@
         const playerSelection = prompt('What is your choice:').toLowerCase();
         const computerSelection = getComputerChoice(arr);
 
-        console.log('Computer:'+ computerSelection)
-        console.log('Player:'+ playerSelection)
-        console.log(playRound(playerSelection, computerSelection));
+        //console.log('Computer:'+ computerSelection)
+        //console.log('Player:'+ playerSelection)
+        //console.log(playRound(playerSelection, computerSelection));
+
+        function game(num){
+            let gameRound = playRound(playerSelection, computerSelection);
+            for( let i=0; i<num; i++){ 
+                if(gameRound === 'You Win!'){
+                    return 'Player Won\n';
+                }
+                else if(gameRound === 'You Lose!'){
+                    return 'Computer Won\n';
+                }else{
+                    return 'No Winner\n';
+                }
+                
+            }
+        
+        }
+        console.log(game(5))
 
     </script>
 </body>  
